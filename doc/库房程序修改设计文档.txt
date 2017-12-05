@@ -1,0 +1,10 @@
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+库房程序修改设计文档
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+1. 刷新数据库可使用过程 Px_RefreshData(tb_Name:string);            ////Px_refresh_Book,Px_refresh_CD,Px_refresh_Ware
+2. 各菜单(既面板的切换)可使用过程 Px_Panel(fromPanel,toPanel);//此时要改变全局变量tb_Name的值.
+3. 切换数据表时可使用过程 Px_ChangeTable(curTable,toTable);//光盘时注意表名与显示名对应
+4. 各种操作都作成过程 Px_Borrow(tb_Name,ID,Num), Px_Return(tb_Name,ID), Px_Search(tb_Name,ID), Px_Search(tb_Name,ID), Px_AddBook(tb_Name), Px_AddCD(), Px_AddWare(), Px_Qurey(brName) //元器件还有数量问题
+5. 当到期时，颜色显示，通过右键启动催还程序
+6. 是否数字函数改为过程 Px_KeyIsNum(Key,Input_Edit)
+7. 切换页面后页面的初始化 Px_IniBook(),Px_IniCD(),Px_IniWare();
